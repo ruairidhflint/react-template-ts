@@ -72,3 +72,13 @@ h6 {
   margin: 20px;
   padding: 0;
 }
+
+#default-text{
+  @apply text-base;
+  @apply text-gray-800
+}
+
+#large-text{
+  @apply text-lg;
+  @apply text-gray-800
+}

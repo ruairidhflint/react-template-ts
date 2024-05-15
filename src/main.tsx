@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 
+// const [location, setLocation] = useState("City of London, England");
+
 const Box = () => {
   return (
-    <div className="shadow-md rounded-lg p-6 flex flex-col items-center">
-      <div className="text-4xl font-bold">10.0</div>
-      <div className="text-base">Some text here</div>
+    <div className="bg-white shadow rounded-lg p-6 flex flex-col items-center">
+      <div className="text-4xl text-gray-800 font-bold">10.0</div>
+      <div id="default-text">Some text here</div>
     </div>
   );
 }
@@ -16,19 +18,18 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <App />
 
-    <div className="text-lg text-right mr-10">
-        City of London, England
+    <div id="large-text"  className="text-right mr-10">
+    City of London, England
     </div>
 
     <div className="grid grid-cols-1 m-20">
-
-      <div className="text-9xl font-bold m-auto">
-        420
+      <div className="text-9xl text-teal-400 font-bold m-auto">
+        20
       </div>
-      <div className="text-3xl font-bold m-auto">
+      <div className="text-3xl text-teal-400 font-bold m-auto">
         Fair
       </div>
-      <div className="text-lg m-auto">
+      <div id="large-text" className="m-auto">
         Air quality
       </div>
 
@@ -43,7 +44,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Box />
       </div>
     </div>
-
 
   </React.StrictMode>,
 )
