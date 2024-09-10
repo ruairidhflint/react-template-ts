@@ -1,0 +1,24 @@
+.TableRow {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 2fr 1fr;
+}
+
+/* Styling for individual cells */
+.TableRow div,
+.table-header div {
+  text-align: left;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+  .ExpensesGridTable {
+    grid-template-columns: 1fr;
+  }
+
+  .TableRow {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    padding: 8px 32px;
+    gap: 2px;
+  }
+}

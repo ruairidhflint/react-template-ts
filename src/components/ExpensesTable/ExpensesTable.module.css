@@ -1,0 +1,66 @@
+/* Table container */
+.ExpensesGridTable {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.Header {
+  padding: 0 0 8px 12px;
+  border-bottom: 2px solid black;
+}
+
+/* Header styling */
+.TableHeader {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 2fr 1fr;
+  font-weight: bold;
+}
+
+/* Body row styling */
+.TableBody {
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 0.5rem;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 600px) {
+  .ExpensesGridTable {
+    grid-template-columns: 1fr;
+    gap: 4px;
+  }
+
+  .TableHeader {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    padding: 8px 32px;
+    gap: 2px;
+  }
+}
+
+.loading {
+  display: block;
+  margin: 32px auto;
+  width: 50px;
+  height: 50px;
+  border: 3px solid gray;
+  border-radius: 50%;
+  border-top-color: black;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
